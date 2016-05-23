@@ -1,0 +1,75 @@
+﻿@using Laboration2_Uppgift1.Helpers
+@model Laboration2_Uppgift1.Models.TwentyOne
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <link href="~/Content/bootstrap.min.css" rel="stylesheet" />
+    <link href="~/Content/bootstrap-theme.min.css" rel="stylesheet" />
+    <link href="~/Content/TwentyOneStyle.css" rel="stylesheet" />
+    <script src="~/Scripts/jquery-1.9.1.min.js"></script>
+    <script src="~/Scripts/bootstrap.min.js"></script>
+    <title>TwentyOne</title>
+</head>
+<body>
+    <div class="container">
+        <h2>Twenty One</h2>
+        <div class="row">
+            <div class="col-md-4 col-md-push-4 helper">
+
+                <h4>@Model.ActiveGameStatus.TextOnScreen</h4>
+            </div>
+        </div>
+        <div class="row main">
+
+            <div class=" col-md-4 col-md-push-4">
+                <form action="~/TwentyOne/TwentyOne" method="POST">
+                    @for (int i = 0; i < Model.GameFields.Count - 1; i++)
+                    {
+                        var plusValue = Model.GameFields[i].PlusValue; //1 lub 2
+                        var presentValue = Model.GameFields[i].Value;
+                        var active = Model.GameFields[i].Active;
+                        var color = Model.GameFields[i].Color;
+
+                        <button type="submit" name="field" class="col-md-4 field @color" value="@plusValue" @active>@presentValue</button>
+                    }
+                </form>
+            </div>
+        </div>
+        
+        <div class="row">
+            <form action="~/TwentyOne/TwentyOne" method="POST">
+
+                <button type="submit"
+                        name="field"
+                        class="col-md-2 col-md-push-5 compMove @Model.GameFields[Model.GameFields.Count - 1].Color"
+                        value="@Model.GameFields[Model.GameFields.Count - 1].PlusValue" @Model.GameFields[Model.GameFields.Count - 1].Active>
+                    Computer move
+                </button>
+            </form>
+
+        </div>
+        <div class="row">
+            <form action="~/TwentyOne/TwentyOne" method="GET">
+
+                <button type="submit"
+                        name="field"
+                        class="col-md-2 col-md-push-5 playAgain"
+                        value="">
+                    Play again
+                </button>
+            </form>
+
+        </div>
+
+
+
+
+    </div>
+</body>
+</html>

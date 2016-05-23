@@ -1,0 +1,58 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 14
+VisualStudioVersion = 14.0.25123.0
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Laboration_1", "Laboration_1\Laboration_1.csproj", "{CB6F4440-A74D-4220-8121-703102B92ED2}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Laboration2_Uppgift2", "Laboration2_Uppgift2\Laboration2_Uppgift2.csproj", "{C811A379-0E7E-4015-867D-1CC6FE47EF79}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Sandbox", "Sandbox\Sandbox.csproj", "{CD9187C1-DC32-4420-B0EB-767F8B1A3676}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Laboration2_Uppgift1", "Laboration2_Uppgift1\Laboration2_Uppgift1.csproj", "{C3196DFA-62A0-4F5B-80BA-DBC556098225}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Sandbox_2", "Sandbox_2\Sandbox_2.csproj", "{9CB689AD-6442-468F-9AB7-1799112CB665}"
+EndProject
+Project("{8BB2217D-0F2D-49D1-97BC-3654ED321F3B}") = "Laboration_3_ContosoBooks", "Laboration_3_ContosoBooks\Laboration_3_ContosoBooks.xproj", "{BA1DD561-88C2-43DD-B99F-9EAF03337558}"
+EndProject
+Project("{8BB2217D-0F2D-49D1-97BC-3654ED321F3B}") = "Laboration_3_MvcMovie", "Laboration_3_MvcMovie\Laboration_3_MvcMovie.xproj", "{5414B4CA-E8DE-44D9-807B-AFA4E5798E3B}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{CB6F4440-A74D-4220-8121-703102B92ED2}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{CB6F4440-A74D-4220-8121-703102B92ED2}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{CB6F4440-A74D-4220-8121-703102B92ED2}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{CB6F4440-A74D-4220-8121-703102B92ED2}.Release|Any CPU.Build.0 = Release|Any CPU
+		{C811A379-0E7E-4015-867D-1CC6FE47EF79}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C811A379-0E7E-4015-867D-1CC6FE47EF79}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C811A379-0E7E-4015-867D-1CC6FE47EF79}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C811A379-0E7E-4015-867D-1CC6FE47EF79}.Release|Any CPU.Build.0 = Release|Any CPU
+		{CD9187C1-DC32-4420-B0EB-767F8B1A3676}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{CD9187C1-DC32-4420-B0EB-767F8B1A3676}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{CD9187C1-DC32-4420-B0EB-767F8B1A3676}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{CD9187C1-DC32-4420-B0EB-767F8B1A3676}.Release|Any CPU.Build.0 = Release|Any CPU
+		{C3196DFA-62A0-4F5B-80BA-DBC556098225}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C3196DFA-62A0-4F5B-80BA-DBC556098225}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C3196DFA-62A0-4F5B-80BA-DBC556098225}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C3196DFA-62A0-4F5B-80BA-DBC556098225}.Release|Any CPU.Build.0 = Release|Any CPU
+		{9CB689AD-6442-468F-9AB7-1799112CB665}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{9CB689AD-6442-468F-9AB7-1799112CB665}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{9CB689AD-6442-468F-9AB7-1799112CB665}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{9CB689AD-6442-468F-9AB7-1799112CB665}.Release|Any CPU.Build.0 = Release|Any CPU
+		{BA1DD561-88C2-43DD-B99F-9EAF03337558}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{BA1DD561-88C2-43DD-B99F-9EAF03337558}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{BA1DD561-88C2-43DD-B99F-9EAF03337558}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{BA1DD561-88C2-43DD-B99F-9EAF03337558}.Release|Any CPU.Build.0 = Release|Any CPU
+		{5414B4CA-E8DE-44D9-807B-AFA4E5798E3B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{5414B4CA-E8DE-44D9-807B-AFA4E5798E3B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{5414B4CA-E8DE-44D9-807B-AFA4E5798E3B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{5414B4CA-E8DE-44D9-807B-AFA4E5798E3B}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

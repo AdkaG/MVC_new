@@ -1,0 +1,37 @@
+﻿.main {
+    margin-top: 40px;
+    }
+.main h4 {
+    margin-top: 15px;
+    margin-bottom: 15px;
+
+}
+.main form {
+    margin-top: 40px;
+}
+.field {
+   height: 64px;
+}
+.orange {
+    background-color: #fc6337;    /*obrazki pozniej*/
+}
+.blue {
+    background-color: lightseagreen;
+}
+.white {
+    background-color: white;
+}
+.white:hover {
+    background-color: gainsboro;
+}
+.black {
+    background-color: black;
+}
+.distance {
+    height: 20px;
+}
+.playAgain {
+    margin-top: 160px;
+    height: 64px;
+    color: #fc6337;
+}

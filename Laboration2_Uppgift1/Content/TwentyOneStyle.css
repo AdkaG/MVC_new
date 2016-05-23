@@ -1,0 +1,41 @@
+﻿.container {
+    text-align: center;
+}
+.main {
+    margin-top: 70px;
+}
+.field {
+    height: 121px;
+    font-size: 40px;
+}
+.field:last-child {
+    font-size: 60px;
+    color: hotpink;
+}
+.compMove {
+    margin-top: 30px;
+    font-size: 18px;
+    height: 60px;
+}
+.playAgain {
+    font-size: 14px;
+    height: 60px;
+    margin-top: 30px;
+}
+.hotpink {
+    background-color: hotpink;
+}
+.pink {
+    background-color: pink;
+}
+.center {
+    text-align: center;
+}
+.helper {
+    margin-top: 50px;
+    text-align: center;
+}
+.helper h4 {
+    margin-bottom: 20px;
+    color: hotpink;
+}

@@ -1,0 +1,61 @@
+﻿@model Laboration2_Uppgift2.Models.TicTacToe
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>TicTacToe</title>
+    <link href="~/Content/bootstrap.min.css" rel="stylesheet" />
+    <link href="~/Content/bootstrap-theme.min.css" rel="stylesheet"/>
+    <link href="~/Content/styleTicTacToe.css" rel="stylesheet" />
+    <script src="~/Scripts/jquery-1.9.1.min.js"></script>
+    <script src="~/Scripts/bootstrap.min.js"></script>
+
+</head>
+<body>
+    <div class="container">
+        <div class="row">
+            <div class="col-md-4 col-md-push-4 main">
+                <h3>TicTacToe</h3>
+                <form action="~/Game/TicTacToe" method="post">
+                    @for (int i = 1, x = 1; i < 4; i++)
+                    {
+                        <div class="row">
+                            @for (int j = 1; j < 4; j++, x++)
+                            {
+                                var value = "";
+                                var active = "";
+                                var colorWinCombo = "";
+                                if (Model.ActiveGameStatus.Status == "Winner")
+                                {
+                                    active = "disabled";
+                                    colorWinCombo = "win"; /*bara för dem som är winningCombo*/
+                                }
+                                var box = Model.BoxList.FirstOrDefault(b => b.BoxCoordinate == x);
+                                if (box.BoxCoordinate > 0)
+                                {
+                                    value = box.Value.ToString();
+                                    active = "disabled";
+                                }
+                                <button type="submit" name="button" class="col-md-4 btn btn-default @colorWinCombo" value="@x" @active>@value</button>
+                            }
+                        </div>
+                    }
+                </form>
+            </div>
+            <div class="col-md-4 col-md-push-4 aside">
+                <h3>@Model.ActiveGameStatus.Text</h3>
+                <form action="~/Game/TicTacToe" method="get">
+                    <button type="submit" name="playAgain" class="col-md-10 col-md-push-1 playAgain " value="PlayAgain">PlayAgain</button>
+                </form>
+            </div>
+        </div>
+        @*@Model.Players[0]
+            @Model.BoxList[1].Value*@
+    </div>
+</body>
+</html>

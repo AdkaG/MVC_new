@@ -1,0 +1,71 @@
+﻿@using Sandbox_2.Helpers
+@model Sandbox_2.Models.FiveInRow
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <link href="~/Content/bootstrap.min.css" rel="stylesheet" />
+    <link href="~/Content/bootstrap-theme.min.css" rel="stylesheet" />
+    <link href="~/Content/FiveInRowStyle.css" rel="stylesheet" />
+    <script src="~/Scripts/jquery-1.9.1.min.js"></script>
+    <script src="~/Scripts/bootstrap.min.js"></script>
+    <title>FiveInRowGame</title>
+</head>
+<body>
+    <div class="container">
+        <div class="row">
+            <div class="col-md-8 col-md-push-2 main">
+                <h3>Five In The Row</h3>
+                <h4>@Model.ActiveGameStatus.TextOnScreen</h4>
+                <form action="~/Game/FiveInRowGame" method="POST">
+                    @for (int i = 6; i >= 0; i--)
+                    {
+                        if (i == 5)
+                        {
+                            <div class="col-md-12 distance"></div>
+                        }
+                        <div class="row">
+                            @for (int j = 0; j < 7; j++)
+                            {
+
+                                var field = Model.FieldsList.FirstOrDefault
+                                                           (f => f.FieldCoordinates.XCoordinate == i && f.FieldCoordinates.YCoordinate == j);
+
+                                var active = "disabled";
+                                var character = "";
+                                var color = "";
+                                var position = j;
+
+                                if (field != null && (field.FieldCoordinates.XCoordinate >= 0 && field.FieldCoordinates.YCoordinate >= 0))
+                                {
+                                    if (field.FieldCoordinates.XCoordinate == 6)
+                                    {
+                                        active = field.Activity;
+                                    }
+                                    character = field.FieldValue.ToString();
+                                    color = field.Color;
+                                }
+                                <button type="submit" name="button" class="col-md-1 field @color" value="@position" @active>@character</button>
+                                
+                            }
+                        </div>
+                        
+                    }
+                </form>
+
+            </div>
+            <div class="col-md-2 aside">
+                
+                <form action="~/Game/FiveInRowGame" method="get">
+                    <button type="submit" name="playAgain" class="col-md-10 col-md-push-1 playAgain " value="PlayAgain">PlayAgain</button>
+                </form>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
