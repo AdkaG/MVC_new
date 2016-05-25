@@ -1,0 +1,48 @@
+﻿@model Test.Models.Person
+
+@{
+    ViewBag.Title = "Details";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>Person</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.Name)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Name)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.Id }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>
+@Ajax.ActionLink(
+    linkText: "If you....",
+    actionName: "HitMe",
+    ajaxOptions: new AjaxOptions()
+    {
+        UpdateTargetId = "ajaxtarget",
+        InsertionMode = InsertionMode.InsertAfter
+    })
+<div id="ajaxtarget"></div>
+@Ajax.ActionLink(
+    linkText: "Partial View will be return! Hurra!",
+    actionName: "GetCarCreate",
+    controllerName: "Car",
+    routeValues:new {id = Model.Id},
+    ajaxOptions:new AjaxOptions()
+    {
+        UpdateTargetId = "ajaxpartial",
+        InsertionMode = InsertionMode.Replace
+    }
+    )
+<div id="ajaxpartial"></div>

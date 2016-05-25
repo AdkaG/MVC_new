@@ -1,0 +1,64 @@
+﻿@using Laboration_4_Uppgift2.Models
+@model Laboration_4_Uppgift2.Models.Student
+
+@{
+    ViewBag.Title = "Details";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>Student</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.Name)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Name)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.LastName)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.LastName)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Personnumber)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Personnumber)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Address)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Address)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.StudentId }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>
+<div id="studentgrades">
+    @Html.Action(
+        actionName: "GradesForStudent",
+        controllerName: "Grade",
+        routeValues: new { id = Model.StudentId })
+</div>
+<div id="addnewgrade">
+    @Html.Action(
+    actionName: "Create",
+    controllerName: "Grade",
+    routeValues:new {id = Model.StudentId})
+</div>

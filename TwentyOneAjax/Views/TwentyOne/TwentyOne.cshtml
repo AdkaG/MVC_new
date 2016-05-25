@@ -1,0 +1,60 @@
+﻿@using TwentyOneAjax.Helpers
+@model TwentyOneAjax.Models.TwentyOne
+@{
+    Layout = null;
+}
+<!DOCTYPE html>
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <link href="~/Content/bootstrap.min.css" rel="stylesheet" />
+    <link href="~/Content/bootstrap-theme.min.css" rel="stylesheet" />
+    <link href="~/Content/TwentyOneStyle.css" rel="stylesheet" />
+    <script src="~/Scripts/jquery-1.9.1.min.js"></script>
+    <script src="~/Scripts/bootstrap.min.js"></script>
+    <title>TwentyOne</title>
+</head>
+<body>
+    <div class="container">
+        <h2>Twenty One</h2>
+        @*<div class="row">
+            <div class="col-md-4 col-md-push-4 helper">
+                <h4>@Model.ActiveGameStatus.TextOnScreen</h4>
+            </div>
+        </div>*@
+        <div class="row main">
+            <div class="col-md-4 col-md-push-4">
+                <div id="game">@Model.PresentValue</div>                                            
+                                          
+                
+                    <button type="submit" name="field" class="col-md-4 field" value="1" >1</button>
+                    <button type="submit" name="field" class="col-md-4 field" value="2" >2</button>
+               
+          
+        </div>
+    </div>
+
+    @*<div class="row">
+        <form action="~/TwentyOne/TwentyOne" method="POST">
+            <button type="submit"
+                    name="field"
+                    class="col-md-2 col-md-push-5 compMove" value="3">
+                Computer move
+            </button>
+        </form>
+    </div>*@
+    @*<div class="row">
+        <form action="~/TwentyOne/TwentyOne" method="GET">
+            <button type="submit"
+                    name="field"
+                    class="col-md-2 col-md-push-5 playAgain"
+                    value="">
+                Play again
+            </button>
+        </form>
+    </div>*@
+
+
+</div>
+</body>
+</html>

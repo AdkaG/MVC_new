@@ -1,0 +1,33 @@
+﻿@model IEnumerable<Laboration_4_Uppgift2.Models.Grade>
+
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.CourseName)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.TheGrade)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.CourseName)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.TheGrade)
+        </td>
+        <td>
+            @Html.ActionLink("Edit", "Edit", new { id=item.GradeId }) |
+            @Html.ActionLink("Details", "Details", new { id=item.GradeId }) |
+            @Html.ActionLink("Delete", "Delete", new { id=item.GradeId })
+        </td>
+    </tr>
+}
+
+</table>

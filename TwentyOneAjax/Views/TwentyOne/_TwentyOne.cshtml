@@ -1,0 +1,23 @@
+﻿@model TwentyOneAjax.Models.TwentyOne
+
+<div>
+    <h4>TwentyOne</h4>
+    <hr />
+    
+       @using (Ajax.BeginForm(
+           actionName: "TwentyOne",
+           controllerName: "TwentyOne",
+           ajaxOptions: new AjaxOptions
+           {
+
+               UpdateTargetId = "game"
+           }))
+       {
+           @Html.AntiForgeryToken()
+
+           <p>
+               @Html.DisplayFor(model => model.PresentValue)
+           </p>
+
+       }
+</div>

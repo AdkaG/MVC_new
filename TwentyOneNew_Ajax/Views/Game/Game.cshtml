@@ -1,0 +1,11 @@
+﻿@model TwentyOneNew_Ajax.Models.TwentyOne
+@{
+    ViewBag.Title = "Game";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Game</h2>
+@{Html.RenderPartial("GetValue", Model);}
+<div id="gameContainer"></div>
+
+

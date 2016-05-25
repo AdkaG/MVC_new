@@ -1,0 +1,41 @@
+﻿@using Test.Models
+@model Test.Models.Game
+
+@{
+    ViewBag.Title = "Game";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Play</h2>
+
+@*<div id="gamevalue">@Game.CurentValue</div>*@
+
+
+<div id="gamevalue">
+    <p>@Game.Message</p>
+    <p>@Game.CurentValue</p>
+
+</div>
+
+@Ajax.ActionLink(
+    linkText:"1",
+    actionName:"AddValue",
+    routeValues: new {buttonValue = 1},
+    ajaxOptions:new AjaxOptions()
+    {
+        UpdateTargetId = "gamevalue",
+        InsertionMode = InsertionMode.Replace
+
+    }
+    )
+@Ajax.ActionLink(
+    linkText: "2",
+    actionName: "AddValue",
+    routeValues: new { buttonValue = 2 },
+    ajaxOptions: new AjaxOptions()
+    {
+        UpdateTargetId = "gamevalue",
+        InsertionMode = InsertionMode.Replace
+
+    }
+    )
